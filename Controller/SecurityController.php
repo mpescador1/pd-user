@@ -333,7 +333,7 @@ class SecurityController extends AbstractController
     /**
      * Override Parameters
      */
-    protected function getParameter(string $name)
+    protected function getParameter(string $name): UnitEnum|array|string|int|float|bool|null
     {
         return $this->has('app.params') ? $this->get('app.params')->get($name) : parent::getParameter($name);
     }
